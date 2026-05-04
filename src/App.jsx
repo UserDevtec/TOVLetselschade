@@ -96,11 +96,13 @@ const routes = {
   "/contact": ContactPage,
 };
 
+const routeRoots = ["over", "diensten", "werkwijze", "contact"];
+
 function App() {
-  const [path, setPath] = useState(normalizePath(window.location.pathname));
+  const [path, setPath] = useState(getCurrentAppPath());
 
   useEffect(() => {
-    const onPopState = () => setPath(normalizePath(window.location.pathname));
+    const onPopState = () => setPath(getCurrentAppPath());
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
@@ -168,7 +170,7 @@ function App() {
 
   function navigate(to) {
     const nextPath = normalizePath(to);
-    window.history.pushState({}, "", nextPath);
+    window.history.pushState({}, "", toBrowserPath(nextPath));
     setPath(nextPath);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -187,10 +189,50 @@ function normalizePath(path) {
   return path.replace(/\/$/, "") || "/";
 }
 
+function getRouteInfo(pathname = window.location.pathname) {
+  const withoutIndex = pathname.replace(/\/index\.html$/, "/");
+  const clean = withoutIndex.replace(/\/+$/, "") || "/";
+  const parts = clean.split("/").filter(Boolean);
+  const routeIndex = parts.findIndex((part) => routeRoots.includes(part));
+
+  if (routeIndex === -1) {
+    return {
+      appPath: "/",
+      basePath: withoutIndex.endsWith("/") ? withoutIndex : `${withoutIndex}/`,
+    };
+  }
+
+  const baseParts = parts.slice(0, routeIndex);
+  const appParts = parts.slice(routeIndex);
+
+  return {
+    appPath: normalizePath(`/${appParts.join("/")}`),
+    basePath: baseParts.length ? `/${baseParts.join("/")}/` : "/",
+  };
+}
+
+function getCurrentAppPath() {
+  return getRouteInfo().appPath;
+}
+
+function toBrowserPath(appPath) {
+  const { basePath } = getRouteInfo();
+  const normalizedAppPath = normalizePath(appPath);
+  const normalizedBase = basePath.endsWith("/") ? basePath.slice(0, -1) : basePath;
+
+  return normalizedAppPath === "/"
+    ? basePath
+    : `${normalizedBase}${normalizedAppPath}`;
+}
+
+function asset(path) {
+  return `${getRouteInfo().basePath}${path.replace(/^\/+/, "")}`;
+}
+
 function Link({ to, navigate, children, className, ariaLabel }) {
   return (
     <a
-      href={to}
+      href={toBrowserPath(to)}
       className={className}
       aria-label={ariaLabel}
       onClick={(event) => {
@@ -227,7 +269,7 @@ function Header({ navigate, path }) {
     <header className={`site-header ${path === "/" ? "is-home" : ""} ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-inner">
         <Link to="/" navigate={go} className="brand" ariaLabel="TOV Letselschade home">
-          <img src="/assets/logo-transparent-svg.svg" alt="TOV Letselschade" />
+          <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade" />
         </Link>
         <nav className="desktop-nav" aria-label="Hoofdnavigatie">
           <Link to="/" navigate={navigate} className={isActive("/") ? "is-active" : ""}>Home</Link>
@@ -413,7 +455,7 @@ function AboutPage() {
 
       <section className="about-founder">
         <div className="founder-mark">
-          <img src="/assets/Jolien.jpeg" alt="Jolien van Horssen" />
+          <img src={asset("/assets/Jolien.jpeg")} alt="Jolien van Horssen" />
         </div>
         <div>
           <p className="eyebrow">Over mij</p>
@@ -528,7 +570,7 @@ function ProcessPage() {
       />
       <section className="process-section process-page">
         <div className="process-media">
-          <img src="/assets/logo-transparent-svg.svg" alt="TOV Letselschade beeldmerk" />
+          <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade beeldmerk" />
         </div>
         <div className="process-content">
           <p>
@@ -682,7 +724,7 @@ function PageHero({ eyebrow, title, text }) {
         <h1>{title}</h1>
         <p className="hero-intro">{text}</p>
       </div>
-      <img src="/assets/Vector.svg" alt="" aria-hidden="true" />
+      <img src={asset("/assets/Vector.svg")} alt="" aria-hidden="true" />
     </section>
   );
 }
@@ -706,7 +748,7 @@ function Footer({ navigate }) {
         <div className="footer-main">
           <div className="footer-brand">
             <Link to="/" navigate={navigate}>
-              <img src="/assets/logo-transparent-svg.svg" alt="TOV Letselschade" />
+              <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade" />
             </Link>
             <p>
               Heldere behandeling van letselschade, toedrachtonderzoek en

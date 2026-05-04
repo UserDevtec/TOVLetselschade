@@ -1091,7 +1091,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/assets/Vector-wit.png");
+  background-image: url("./Vector-wit.png");
   background-repeat: no-repeat;
   background-position: right clamp(20px, 8vw, 120px) center;
   background-size: min(32vw, 210px);
