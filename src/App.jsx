@@ -300,10 +300,6 @@ function Header({ navigate, path }) {
           <Link to="/werkwijze" navigate={go} className={isActive("/werkwijze") ? "is-active" : ""}>Werkwijze</Link>
           <Link to="/contact" navigate={go} className={isActive("/contact") ? "is-active" : ""}>Contact</Link>
         </nav>
-        <a className="mobile-menu-contact" href="mailto:info@tovletselschade.nl">
-          <Mail size={18} />
-          info@tovletselschade.nl
-        </a>
       </div>
     </header>
   );
@@ -569,6 +565,7 @@ function ProcessPage() {
         text="De behandeling van elke zaak start in principe met een bezoek aan de ongevalslocatie of het slachtoffer."
       />
       <section className="process-section process-page">
+        <BubbleField variant="process" />
         <div className="process-media">
           <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade beeldmerk" />
         </div>
