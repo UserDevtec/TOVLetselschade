@@ -283,7 +283,16 @@ function Header({ navigate, path }) {
   }
 
   return (
-    <header className={`site-header ${path === "/" ? "is-home" : ""} ${scrolled ? "is-scrolled" : ""}`}>
+    <header
+      className={[
+        "site-header",
+        path === "/" ? "is-home" : "",
+        scrolled ? "is-scrolled" : "",
+        menuOpen ? "is-menu-open" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className="header-inner">
         <Link to="/" navigate={go} className="brand" ariaLabel="TOV Letselschade home">
           <img src={asset("/assets/tov-logo.svg")} alt="TOV Letselschade" />
