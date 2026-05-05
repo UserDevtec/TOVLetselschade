@@ -628,10 +628,11 @@ function ContactPage() {
   return (
     <>
       <PageHero
+        className="contact-hero"
         eyebrow="Contact"
         title={
           <>
-            Een dossier bespreken of <em>advies</em> nodig?
+            Een dossier bespreken of <em>advies</em>{" "}nodig?
           </>
         }
         text="Neem contact op voor letselschade, toedrachtonderzoek of advies in aansprakelijkheidsvraagstukken."
@@ -649,7 +650,7 @@ function ContactBlock() {
       <div>
         <p className="eyebrow">Maak kennis</p>
         <h2>
-          Graag kijk ik wat ik voor uw <em>bedrijf</em> kan betekenen.
+          Graag kijk ik wat ik voor uw <em>bedrijf</em>{" "}kan betekenen.
         </h2>
         <p>
           TOV werkt landelijk en is inzetbaar voor verzekeraars, bedrijven en
@@ -730,9 +731,18 @@ function ContactBlock() {
   );
 }
 
-function PageHero({ eyebrow, title, text }) {
+function PageHero({ eyebrow, title, text, className = "" }) {
+  const hasLongTitle =
+    typeof title === "string" &&
+    title
+      .split(/\s+/)
+      .some((word) => word.replace(/[^\p{L}\p{N}]/gu, "").length > 16);
+  const heroClassName = ["page-hero", hasLongTitle ? "long-title" : "", className]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <section className="page-hero">
+    <section className={heroClassName}>
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
