@@ -99,12 +99,20 @@ const routes = {
 const routeRoots = ["over", "diensten", "werkwijze", "contact"];
 
 function App() {
-  const [path, setPath] = useState(getCurrentAppPath());
+  const [path, setPath] = useState(getInitialAppPath());
 
   useEffect(() => {
     const onPopState = () => setPath(getCurrentAppPath());
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  useEffect(() => {
+    const redirectedPath = getRedirectedPathFromQuery();
+
+    if (redirectedPath) {
+      window.history.replaceState({}, "", toBrowserPath(redirectedPath));
+    }
   }, []);
 
   const service = useMemo(() => {
@@ -213,6 +221,15 @@ function getRouteInfo(pathname = window.location.pathname) {
 
 function getCurrentAppPath() {
   return getRouteInfo().appPath;
+}
+
+function getRedirectedPathFromQuery() {
+  const redirectedPath = new URLSearchParams(window.location.search).get("p");
+  return redirectedPath ? normalizePath(redirectedPath) : null;
+}
+
+function getInitialAppPath() {
+  return getRedirectedPathFromQuery() || getCurrentAppPath();
 }
 
 function toBrowserPath(appPath) {
