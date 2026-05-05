@@ -269,7 +269,7 @@ function Header({ navigate, path }) {
     <header className={`site-header ${path === "/" ? "is-home" : ""} ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-inner">
         <Link to="/" navigate={go} className="brand" ariaLabel="TOV Letselschade home">
-          <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade" />
+          <img src={asset("/assets/tov-logo.svg")} alt="TOV Letselschade" />
         </Link>
         <nav className="desktop-nav" aria-label="Hoofdnavigatie">
           <Link to="/" navigate={navigate} className={isActive("/") ? "is-active" : ""}>Home</Link>
@@ -567,7 +567,7 @@ function ProcessPage() {
       <section className="process-section process-page">
         <BubbleField variant="process" />
         <div className="process-media">
-          <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade beeldmerk" />
+          <img src={asset("/assets/tov-logo.svg")} alt="TOV Letselschade beeldmerk" />
         </div>
         <div className="process-content">
           <p>
@@ -745,7 +745,7 @@ function Footer({ navigate }) {
         <div className="footer-main">
           <div className="footer-brand">
             <Link to="/" navigate={navigate}>
-              <img src={asset("/assets/logo-transparent-svg.svg")} alt="TOV Letselschade" />
+              <img src={asset("/assets/tov-logo.svg")} alt="TOV Letselschade" />
             </Link>
             <p>
               Heldere behandeling van letselschade, toedrachtonderzoek en
