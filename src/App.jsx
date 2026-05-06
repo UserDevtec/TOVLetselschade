@@ -339,7 +339,7 @@ function HomePage({ navigate }) {
         <div className="hero-copy">
           <p className="eyebrow">Letselschade & toedrachtonderzoek</p>
           <h1>
-            Helderheid in <em>letsel</em>, schade en aansprakelijkheid.
+            Helderheid in <em>letsel</em>, schade en aansprakelijkheid
           </h1>
           <p className="hero-intro">
             TOV staat voor zeer goed, uitstekend en buitengewoon functioneel.
@@ -371,7 +371,7 @@ function HomePage({ navigate }) {
       <section className="section compact-section">
         <div className="section-heading">
           <p className="eyebrow">Waarvoor</p>
-          <h2>Drie duidelijke ingangen.</h2>
+          <h2>Drie duidelijke ingangen</h2>
         </div>
         <div className="feature-grid">
           <FeatureLink
@@ -398,7 +398,7 @@ function HomePage({ navigate }) {
       <section className="home-process">
         <div className="home-process-copy">
           <p className="eyebrow">Werkwijze</p>
-          <h2>Rust in het dossier, scherpte in de analyse.</h2>
+          <h2>Rust in het dossier, scherpte in de analyse</h2>
           <p>
             De behandeling start met het helder krijgen van de feiten. Waar
             nodig volgt een bezoek aan de ongevalslocatie of het slachtoffer.
@@ -443,7 +443,7 @@ function AboutPage() {
         title={
           <>
             Nuchter, <em>daadkrachtig</em> en met aandacht voor de mens achter
-            het dossier.
+            het dossier
           </>
         }
         text="TOV Letselschade & Toedrachtonderzoek werkt landelijk, met wortels in de Alblasserwaard."
@@ -482,7 +482,7 @@ function AboutPage() {
         <div>
           <p className="eyebrow">Over mij</p>
           <h2>
-            Ik ben <em>Jolien van Horssen</em>.
+            Ik ben <em>Jolien van Horssen</em>
           </h2>
           <p>
             Al jarenlang ben ik werkzaam in de letselschade. Eerst werkte ik
@@ -512,7 +512,7 @@ function ServicesPage({ navigate }) {
         title={
           <>
             Ondersteuning waar <em>feiten</em>, <em>schade</em> en
-            aansprakelijkheid samenkomen.
+            aansprakelijkheid samenkomen
           </>
         }
         text="TOV is gespecialiseerd in letselschadedossiers, toedrachtonderzoek, analyse van vastgelopen zaken en aansprakelijkheidsadvies."
@@ -585,7 +585,7 @@ function ProcessPage() {
         title={
           <>
             First time right: feiten zorgvuldig analyseren, <em>helder</em>{" "}
-            adviseren.
+            adviseren
           </>
         }
         text="De behandeling van elke zaak start in principe met een bezoek aan de ongevalslocatie of het slachtoffer."
@@ -659,7 +659,7 @@ function ContactBlock() {
       <div>
         <p className="eyebrow">Maak kennis</p>
         <h2>
-          Graag kijk ik wat ik voor uw <em>bedrijf</em>{" "}kan betekenen.
+          Graag kijk ik wat ik voor uw <em>bedrijf</em>{" "}kan betekenen
         </h2>
         <p>
           TOV werkt landelijk en is inzetbaar voor verzekeraars, bedrijven en
@@ -788,6 +788,7 @@ function Footer({ navigate }) {
               advies in aansprakelijkheidskwesties.
             </p>
             <div className="footer-badges">
+              <span>NIS</span>
               <span>NiVRE-expert</span>
               <span>Werkt volgens de GBL</span>
             </div>
@@ -814,7 +815,7 @@ function Footer({ navigate }) {
             </a>
             <p>
               <MapPin size={16} />
-              Landelijk inzetbaar
+              Landelijk inzetbaar, werkt vanuit de Randstad
             </p>
           </div>
         </div>
