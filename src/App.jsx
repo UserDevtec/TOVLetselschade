@@ -823,9 +823,8 @@ function Footer({ navigate }) {
         <div className="footer-bottom">
           <p>© {year} TOV Letselschade. Alle rechten voorbehouden.</p>
           <p>
-            Gemaakt door{" "}
             <a href="https://devtec.nl" target="_blank" rel="noreferrer">
-              Devtec
+              Gemaakt door Devtec
             </a>
           </p>
         </div>
