@@ -1524,6 +1524,12 @@ h2 {
   font-weight: 700;
 }
 
+.footer-bottom a:hover {
+  color: #574848;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
