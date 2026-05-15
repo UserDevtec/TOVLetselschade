@@ -338,7 +338,7 @@ function Header({ navigate, path }) {
 function HomePage({ navigate }) {
   return (
     <>
-      <section className="hero home-hero fluid-hero">
+      <section className="hero home-hero">
         <BubbleField />
         <div className="hero-copy">
           <p className="eyebrow">Letselschade & toedrachtonderzoek</p>
@@ -348,31 +348,26 @@ function HomePage({ navigate }) {
           <p className="hero-intro">
             TOV staat voor zeer goed, uitstekend en buitengewoon functioneel.
             Vanuit die maatstaf werkt Jolien van Horssen aan zorgvuldige
-            dossiers, nuchter onderzoek en juridisch verantwoord advies.
+              dossiers, nuchter onderzoek en juridisch verantwoord advies.
           </p>
+          <div className="hero-actions">
+            <Link to="/contact" navigate={navigate} className="primary-button">
+              Maak kennis
+              <ArrowRight size={18} />
+            </Link>
+            <Link to="/diensten" navigate={navigate} className="secondary-link">
+              Bekijk diensten
+            </Link>
+          </div>
         </div>
 
-        <div className="fluid-hero-footer">
-          <div className="fluid-hero-footer-inner">
-            <p>
-              Zorgvuldige behandeling van letselschadedossiers, scherp
-              toedrachtonderzoek en juridisch verantwoord advies bij
-              aansprakelijkheidskwesties.
-            </p>
-            <div className="hero-actions">
-              <Link to="/contact" navigate={navigate} className="primary-button light-button">
-                Maak kennis
-                <ArrowRight size={18} />
-              </Link>
-              <Link to="/diensten" navigate={navigate} className="secondary-link light-link">
-                Bekijk diensten
-              </Link>
-            </div>
-          </div>
+        <div className="hero-panel">
+          <BubbleField variant="panel" />
+          <img className="hero-logo" src={asset("/assets/tov-logo.svg")} alt="Tov letselschade & toedrachtonderzoek" />
         </div>
       </section>
 
-      <section className="section compact-section">
+      <section className="section compact-section entry-section">
         <div className="section-heading">
           <p className="eyebrow">Waarvoor</p>
           <h2>Drie duidelijke ingangen</h2>
