@@ -580,11 +580,11 @@ function ProcessPage() {
         text="De behandeling van elke zaak start in principe met een bezoek aan de ongevalslocatie of het slachtoffer."
       />
       <section className="process-section process-page">
-        <BubbleField variant="process" />
         <div className="process-media">
           <img src={asset("/assets/tov-logo.svg")} alt="TOV Letselschade beeldmerk" />
         </div>
         <div className="process-content">
+          <BubbleField variant="process" />
           <p>
             Na het bezoek volgt een zorgvuldige analyse van de feiten. Die
             feiten worden getoetst aan relevante wetgeving en van het onderzoek
