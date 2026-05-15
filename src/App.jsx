@@ -21,62 +21,66 @@ const services = [
     slug: "letselschadedossier",
     icon: ClipboardCheck,
     title: "Integrale behandeling van een letselschadedossier",
-    short: "Regie, voortgang en zorgvuldige afwikkeling in een helder dossier.",
-    text: "De behandeling gebeurt in nauw overleg met de opdrachtgever. U blijft steeds op de hoogte van gebeurtenissen, voortgang en de laatste stand van zaken.",
-    detail:
-      "TOV brengt letselschadedossiers terug tot de kern: wat is er gebeurd, welke schade speelt, welke belangen zijn er en welke vervolgstappen zijn nodig. De behandeling is zorgvuldig, praktisch en steeds gericht op een juridisch verantwoorde oplossing voor alle partijen.",
+    short: "Regie, voortgang en zorgvuldige afwikkeling van (complexe) letselschadedossiers",
+    text: "Regie, voortgang en zorgvuldige afwikkeling van (complexe) letselschadedossiers",
+    detail: [
+      "TOV brengt letselschadedossiers terug tot de kern: wat is er gebeurd, welke belangen zijn er en welke vervolgstappen zijn nodig. De behandeling is zorgvuldig, praktisch en steeds gericht op een juridisch verantwoorde oplossing voor alle partijen.",
+      "Tijdens het gehele traject wordt u als opdrachtgever op de hoogte gehouden van de ontwikkelingen en worden belangrijke beslissingen met u overlegd.",
+    ],
   },
   {
     slug: "eenmalig-bezoek",
     icon: BriefcaseBusiness,
     title: "Eenmalig bezoek in lopende zaken",
-    short: "Een scherp bezoek wanneer een lopend dossier opnieuw richting vraagt.",
-    text: "Een zorgvuldig bezoek aan de ongevalslocatie of het slachtoffer brengt feiten, context en vervolgstappen opnieuw helder in beeld.",
-    detail:
-      "In langer lopende zaken kan een goed voorbereid bezoek veel duidelijkheid geven. TOV inventariseert de situatie, luistert naar betrokkenen en vertaalt de bevindingen naar concrete aandachtspunten voor de verdere behandeling.",
+    short: "Een verhelderend bezoek wanneer een lopend dossier opnieuw richting vraagt",
+    text: "Een verhelderend bezoek wanneer een lopend dossier opnieuw richting vraagt",
+    detail: [
+      "De GBL schrijft voor dat de verzekeraar tenminste één keer per jaar contact heeft met de benadeelde. In lopende zaken kan een bezoek helpen om helderheid te krijgen over de situatie en de feiten. TOV inventariseert de situatie, luistert naar betrokkenen en vertaalt de bevindingen naar concrete aandachtspunten voor de verdere behandeling.",
+      "De uitkomst is een advies met een helder beeld van de feiten, de knelpunten en een praktisch advies voor het vervolg.",
+    ],
   },
   {
     slug: "analyse-vastgelopen-zaken",
     icon: Target,
     title: "Analyse in vastgelopen zaken",
-    short: "Complexe dossiers terug naar feiten, kernvragen en besluitvorming.",
-    text: "Complexe dossiers worden teruggebracht tot de kern, met een realistische blik op bewijs, schade, aansprakelijkheid en oplossing.",
-    detail:
-      "Wanneer een dossier vastloopt, helpt een nuchtere analyse. TOV kijkt naar de stukken, de discussiepunten, de bewijspositie en de juridische haalbaarheid. Het resultaat is een heldere route om het dossier weer in beweging te krijgen.",
+    short: "Complexe dossiers terug naar feiten, kernvragen en besluitvorming",
+    text: "Complexe dossiers terug naar feiten, kernvragen en besluitvorming",
+    detail: [
+      "Wanneer een dossier vastloopt, helpt een nuchtere analyse. TOV kijkt naar de stukken, de discussiepunten, de bewijspositie en de juridische haalbaarheid. Het resultaat is een heldere route om het dossier weer in beweging te krijgen. Daarvoor is het meestal nodig om een slachtoffer te bezoeken om duidelijkheid te krijgen over de beweegredenen en om met de betrokken partijen te bespreken wat nodig is om verder te komen. Het zonder oordeel luisteren naar partijen helpt vaak om partijen weer op één lijn te krijgen en de zaak vlot te trekken.",
+    ],
   },
   {
     slug: "toedrachtonderzoek",
     icon: SearchCheck,
     title: "Toedrachtonderzoek",
-    short: "Feitelijk onderzoek bij ongevallen, bedrijven en complexe situaties.",
-    text: "Onderzoek bij bedrijven voor aansprakelijkheidsverzekeraars of bedrijven met een hoog eigen risico, met aandacht voor detail en feitelijke onderbouwing.",
-    detail:
-      "TOV onderzoekt de toedracht van een gebeurtenis zorgvuldig. Dat kan gaan om een bezoek aan de ongevalslocatie, het verzamelen van informatie, het horen van betrokkenen of het vastleggen van omstandigheden die relevant zijn voor de aansprakelijkheidsvraag.",
+    short: "Feitelijk onderzoek naar de toedracht en schuldvraag bij ongevallen",
+    text: "Feitelijk onderzoek naar de toedracht en schuldvraag bij ongevallen",
+    detail: [
+      "Of het nu gaat om een bedrijfsongeval of een verkeersongeval, TOV onderzoekt en analyseert de toedracht van een gebeurtenis zorgvuldig en brengt daarbij de juridische verhouding tussen de verschillende partijen in beeld. Onderdeel van het onderzoek is een bezoek aan de ongevalslocatie en/of het verzekerde bedrijf waarbij de relevante omstandigheden en feiten worden verzameld.",
+      "De verzamelde informatie wordt vastgelegd in een helder rapport met een advies dat aansluit op de relevante wetgeving en de laatste jurisprudentie.",
+    ],
   },
   {
     slug: "aansprakelijkheidsadvies",
     icon: Scale,
     title: "Advies in aansprakelijkheidsvraagstukken",
-    short: "Juridisch toepasbaar advies over aansprakelijkheid, schuldvraag en vervolg.",
-    text: "De feiten worden getoetst aan relevante wetgeving en jurisprudentie, waarna een juridisch onderbouwd advies volgt.",
-    detail:
-      "Aansprakelijkheid vraagt om een combinatie van feiten, recht en realisme. TOV toetst het dossier aan wetgeving en relevante jurisprudentie en geeft een advies dat praktisch bruikbaar is voor verdere besluitvorming.",
+    short: "Juridisch toepasbaar advies over aansprakelijkheid, schuldvraag en vervolg",
+    text: "Juridisch toepasbaar advies over aansprakelijkheid, schuldvraag en vervolg",
+    detail: [
+      "Het beoordelen van aansprakelijkheid kan complex zijn en vraagt om toegepaste juridische kennis en ervaring. TOV beoordeelt de feiten met een juridische en deskundige blik en adviseert over de aansprakelijkheid, eventuele eigen schuld en regresmogelijkheden.",
+    ],
   },
   {
     slug: "rapportage-plan-van-aanpak",
     icon: FileText,
     title: "Rapportage en plan van aanpak",
-    short: "Een helder rapport met advies en concrete vervolgstappen.",
-    text: "Van onderzoek of inventarisatie wordt een uitgebreid rapport opgemaakt, inclusief advies en een plan voor het vervolgtraject.",
-    detail:
+    short: "Een helder rapport met advies en concrete vervolgstappen",
+    text: "Een helder rapport met advies en concrete vervolgstappen",
+    detail: [
       "Een goed rapport maakt besluitvorming eenvoudiger. TOV rapporteert zakelijk, helder en bruikbaar: met bevindingen, juridische duiding waar relevant, advies en een praktisch plan voor het vervolg.",
+      "De uitkomst is een helder beeld van de feiten, de juridische aandachtspunten en de praktische route voor het vervolg.",
+    ],
   },
-];
-
-const values = [
-  ["Pragmatisch", "Gericht op oplossingen die echt werken."],
-  ["Doelgericht", "Met focus op feiten, duidelijkheid en voortgang."],
-  ["Menselijk", "Met aandacht voor alle betrokkenen."],
 ];
 
 const quality = [
@@ -446,16 +450,16 @@ function AboutPage() {
             het dossier
           </>
         }
-        text="TOV Letselschade & Toedrachtonderzoek werkt landelijk, met wortels in de Alblasserwaard."
+        text="Tov letselschade & toedrachtonderzoek werkt landelijk, met wortels in de Alblasserwaard."
       />
 
       <section className="section intro-section">
         <div className="intro-grid">
           <div className="intro-copy">
             <p>
-              Het woord TOV staat voor zeer goed, uitstekend of buitengewoon
+              Het woord tov staat voor zeer goed, uitstekend of buitengewoon
               functioneel. Dat is de basis van deze onderneming en de maatstaf
-              in alles wat TOV doet.
+              in alles wat Tov doet.
             </p>
             <p>
               De Alblasserwaard staat bekend om nuchterheid,
@@ -463,14 +467,6 @@ function AboutPage() {
               ziet u terug in de manier van werken: realistisch, zorgvuldig en
               gericht op oplossingen.
             </p>
-          </div>
-          <div className="value-list">
-            {values.map(([title, text]) => (
-              <article key={title}>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -492,8 +488,8 @@ function AboutPage() {
             partijen.
           </p>
           <p>
-            Daarna werkte ik als expert voor een toonaangevend expertisebureau
-            op het gebied van personenschade en toedrachtonderzoek. Mijn
+            Daarna werkte ik als expert personenschade bij een toonaangevend
+            expertisebureau voor personenschade en toedrachtonderzoek. Mijn
             onderzoek is gedegen, met oog voor detail, en mijn
             aansprakelijkheidsadvies sluit aan op de toepasselijke
             jurisprudentie.
@@ -549,11 +545,9 @@ function ServiceDetailPage({ service, navigate }) {
           <div className="service-icon">
             <Icon size={24} />
           </div>
-          <p>{service.detail}</p>
-          <p>
-            De uitkomst is een helder beeld van de feiten, de juridische
-            aandachtspunten en de praktische route voor het vervolg.
-          </p>
+          {service.detail.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
           <div className="hero-actions">
             <Link to="/contact" navigate={navigate} className="primary-button">
               Bespreek dit onderdeel
@@ -644,7 +638,7 @@ function ContactPage() {
             Een dossier bespreken of <em>advies</em>{" "}nodig?
           </>
         }
-        text="Neem contact op voor letselschade, toedrachtonderzoek of advies in aansprakelijkheidsvraagstukken."
+        text="Neem contact op voor letselschade, toedrachtonderzoek of advies in aansprakelijkheidsvraagstukken"
       />
       <ContactBlock />
     </>
@@ -662,8 +656,8 @@ function ContactBlock() {
           Graag kijk ik wat ik voor uw <em>bedrijf</em>{" "}kan betekenen
         </h2>
         <p>
-          TOV werkt landelijk en is inzetbaar voor verzekeraars, bedrijven en
-          opdrachtgevers met complexe dossiers.
+          TOV werkt landelijk en is inzetbaar voor zowel verzekeraars als
+          bedrijven die zijn aangesproken voor een ongeval
         </p>
         <form
           className="contact-form"
@@ -729,7 +723,7 @@ function ContactBlock() {
         </a>
         <p>
           <MapPin size={19} />
-          Landelijk inzetbaar, geworteld in de Alblasserwaard
+          Landelijk inzetbaar, werkend vanuit de Randstad
         </p>
         <p>
           <BriefcaseBusiness size={19} />
@@ -781,14 +775,13 @@ function Footer({ navigate }) {
         <div className="footer-main">
           <div className="footer-brand">
             <Link to="/" navigate={navigate}>
-              <img src={asset("/assets/tov-logo.svg")} alt="TOV Letselschade" />
+              <img src={asset("/assets/tov-logo.svg")} alt="Tov letselschade & toedrachtonderzoek" />
             </Link>
             <p>
               Heldere behandeling van letselschade, toedrachtonderzoek en
               advies in aansprakelijkheidskwesties.
             </p>
             <div className="footer-badges">
-              <span>NIS</span>
               <span>NiVRE-expert</span>
               <span>Werkt volgens de GBL</span>
             </div>
@@ -815,7 +808,7 @@ function Footer({ navigate }) {
             </a>
             <p>
               <MapPin size={16} />
-              Landelijk inzetbaar, werkt vanuit de Randstad
+              Landelijk inzetbaar, werkend vanuit de Randstad
             </p>
           </div>
         </div>

@@ -234,7 +234,7 @@ img {
 }
 
 .brand img {
-  width: 148px;
+  width: 190px;
   height: auto;
 }
 
@@ -919,11 +919,12 @@ h2 {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 0.92fr) minmax(360px, 1.08fr);
+  grid-template-columns: 1fr;
   gap: clamp(32px, 5vw, 72px);
 }
 
 .intro-copy {
+  max-width: 100%;
   color: #756565;
   font-size: clamp(18px, 2vw, 22px);
   line-height: 1.58;
@@ -1412,7 +1413,7 @@ h2 {
 }
 
 .site-footer img {
-  width: 168px;
+  width: 220px;
 }
 
 .footer-main {
@@ -1945,7 +1946,7 @@ h2 {
   }
 
   .brand img {
-    width: 108px;
+    width: 136px;
   }
 
   .nav-cta {
@@ -2207,6 +2208,6 @@ h2 {
 
 @media (max-width: 420px) {
   .site-footer img {
-    width: 146px;
+    width: 184px;
   }
 }
