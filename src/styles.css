@@ -704,7 +704,7 @@ h2 em {
 .hero-logo {
   position: relative;
   z-index: 1;
-  width: min(68%, 470px);
+  width: min(84%, 600px);
   height: 100%;
   min-height: 520px;
   margin: auto;
@@ -2070,7 +2070,7 @@ h2 {
 
   .home-hero .hero-logo {
     min-height: 270px;
-    width: min(70%, 280px);
+    width: min(86%, 350px);
     padding: 28px 20px;
   }
 
